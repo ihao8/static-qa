@@ -1,0 +1,67 @@
+$base-radius: 3px;
+$base-color: hsl(243, 18%, 26%);
+$offset: 16px;
+
+#tithely-popup {
+    position: fixed;
+    bottom: $offset;
+    left: $offset;
+    font-size: 14px;
+    line-height: 20px;
+    z-index: 999999;
+    width: 320px;
+    max-width: calc(100vw - #{$offset * 2});
+    padding: 8px;
+    color: $base-color;
+    background-color: white;
+    box-shadow: 0 0 9px hsla(240, 5%, 35%, 0.11);
+    border-radius: $base-radius;
+    overflow: hidden;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 250ms, transform 250ms;
+
+    &.transition {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    .header {
+        padding: 8px;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 500;
+    }
+
+    .body,
+    .footer{
+        padding: 8px;
+    }
+
+    a {
+        position: relative;
+        color: inherit;
+        background: transparent;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    button {
+        display: block;
+        width: 100%;
+        padding: 12px 24px;
+        font-size: inherit;
+        line-height: 1;
+        border: none;
+        border-radius: $base-radius;
+        font-family: inherit;
+        font-weight: bold;
+        color: white;
+        background-color: $base-color;
+        cursor: pointer;
+    }
+}

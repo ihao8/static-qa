@@ -1,0 +1,11 @@
+{
+  "name": "static",
+  "private": true,
+  "scripts": {
+    "setup": "lerna run setup",
+    "build": "lerna run build"
+  },
+  "devDependencies": {
+    "lerna": "^3.16.4"
+  }
+}
